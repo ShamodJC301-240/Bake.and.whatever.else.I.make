@@ -1,0 +1,35 @@
+html{
+  background-color: black;
+}
+.h1{
+  font-family: helvetica;
+  color: olive;
+}
+h2{
+  font-family: fantasy, helvetica;
+  font-display: teal;
+}
+.sweets{
+  max-height: 100px;
+  max-width: 100px;
+}
+.selection{
+  color: mistyrose;
+}
+ol{
+  color: teal;
+}
+ul{
+  color: orange;
+}
+img{
+  border: 50px 50px 50px 50px;
+}
+p{
+  font-family: fantasy;
+  color: cornflowerblue;
+}
+
+img{
+  bottom-left: 40px;
+}
