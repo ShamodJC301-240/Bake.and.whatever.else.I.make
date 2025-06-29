@@ -1,54 +1,74 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Edibles</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <div>
-  <body>
-    <div>
-    <h1>For Family & Friends</h1>
-    <script src="script.js"></script>
-    <h2 class="selection">Have a look at our selection</h2>
-    <img src="https://www.iheartnaptime.net/wp-content/uploads/2022/03/I-Heart-Naptime-Easter-Cake-Pops-9-500x500.jpg" class="sweets">
-      <img src="https://media.istockphoto.com/id/1130692246/photo/homemade-chocolate-brownies-shot-from-above.jpg?s=612x612&w=0&k=20&c=vwXHR_DXORJNqHA8ufMhD38y4YqfPvChZioxT0bZjQQ=" class="sweets">
-      <img src="https://horizon.com/wp-content/uploads/recipe-cin-roll-hero.jpg" class="sweets">
-      <img src="https://cheneetoday.com/wp-content/uploads/2021/08/Buttermilk-Blueberry-muffins.jpg" class="sweets">
-      <img src="biscuits">
-      <img src="pastries">
-      <img src="chocolates">
-      <img src="cakes"">
-      </div>
-      <div>
-    <ol id="TheSweets">
-      <li>Cinnamon Roll</li>
-      <li>Cake Pops</li>
-      <li>Cupcakes</li>
-      <li>Muffins</li>
-      <li>cookies</li>
-    </ol>
-    <h2>Our Ingredients</h2>
-    <ul>
-      <li>all purpose flour</li>
-      <li>eggs</li>
-      <li>granulated sugar</li>
-      <li>butter</li>
-      <li>flaky salt</li>
-      <li>vanilla extract</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-        </div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <header>
+    <h1>Hugs & Honey</h1>
+    <p>Freshly Baked Goodness Every Day</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <div class="cart" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <div id="cart-panel" class="cart-panel">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
   </div>
-  <div>
-    <body>
-      <h3><em>About Us</em></h3>
-      <p>Just here to brighten up your day</p>
-    </body>
-  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Hugs & Honey, a family owned bakery, that has been delighting tastebuds since 2000 with fresh, homemade baked goods.</p>
+    <div class="carousel">
+      <img src="https://assets.zuckerjagdwurst.com/u4q97pkqszcdxj62j8adg1z9xdpz/1200/640/75/true/center/undefined.jpg?animated=undefined" alt="Croissant">
+      <img src="https://vikalinka.com/wp-content/uploads/2021/03/Garlic-Butter-Dinner-Rolls-11-Edit.jpg" alt="Bread">
+      <img src="https://www.mamaknowsglutenfree.com/wp-content/uploads/2021/07/featured-gluten-free-chocolate-chip-cookies-recipe.jpg" alt="Cookies">
+      <img src="https://www.glutenfreepalate.com/wp-content/uploads/2020/06/Gluten-Free-Birthday-Cake-4.2-720x405.jpg" alt="Cake">
+      <img src="https://www.iheartnaptime.net/wp-content/uploads/2022/03/I-Heart-Naptime-Easter-Cake-Pops-9-500x500.jpg" alt="Cake Pops">
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="filter">
+      <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+    </div>
+    <div class="products" id="productList">
+      <!-- Products dynamically rendered via JS -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" onsubmit="event.preventDefault(); showToast('Thanks for your message!'); this.reset();">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Hugs & Honey. All rights reserved.
+  </footer>
+
+  <div id="toastContainer"></div>
+
   <script src="script.js"></script>
-</
+</body>
+</html>
