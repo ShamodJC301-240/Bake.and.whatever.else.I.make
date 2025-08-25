@@ -1,4 +1,4 @@
-# Bake.and.whatever.else.I.make
+Butter & Bonbons bakery
 
 I DO NOT OWN THE RIGHTS TO THESE IMAGES. The images I used are just place holders at the moment.
 I also will update with a new name because all of the bakery names I like are taken. Hugs & Honey as a bakery is too closely named to another REAL bakery.
